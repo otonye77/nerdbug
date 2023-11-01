@@ -4,25 +4,25 @@ import { TextInput } from "react-native-paper";
 import { useNavigation } from "@react-navigation/native";
 
 const Login = () => {
-  const [email, setEmail] = useState("");
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const navigation = useNavigation();
 
 
   const handleChange = (field, value) => {
-    if (field === "email") {
-      setEmail(value);
+    if (field === "username") {
+      setUsername(value);
     } else if (field === "password") {
       setPassword(value);
     }
   };
   const handleSubmit = () => {
-    if(!email || !password){
+    if(!username || !password){
         Alert.alert("No field can be empty");
         return;
     }
     navigation.navigate("Profile", {
-        email
+        username
     })
   };
   return (
@@ -31,9 +31,9 @@ const Login = () => {
         <Text style={{ textAlign: "center", fontSize: 25 }}>Register</Text>
         <View style={{ width: "100%", marginTop: 10 }}>
           <TextInput
-            label="Email"
-            value={email}
-            onChangeText={(text) => handleChange("email", text)}
+            label="Username"
+            value={username}
+            onChangeText={(text) => handleChange("username", text)}
           />
         </View>
         <View style={{ marginTop: 10 }}>
