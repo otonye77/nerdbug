@@ -1,11 +1,14 @@
-import { Text, View } from "react-native"
+import { Text, View, Image } from "react-native";
 
 const Profile = () => {
-    return (
-        <View>
-            <Text></Text>
-        </View>
-    )
-}
+  return (
+    <View>
+      <Image
+        source={require("../../assets/profile.jpeg")}
+        style={{ width: 200, height: 200 }}
+      />
+    </View>
+  );
+};
 
 export default Profile;
