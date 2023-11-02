@@ -19,19 +19,20 @@ const DummyData = [
     title: "koyo App",
     description:
       "This project is an ecommerce Mobile App that Supports group buying. Users can come together and join their money to buy products. I built this mobile application with React Native for the front-end, and Node.js and Express for the back-end. The database used is Postgresql.",
-    image: require("../../assets/citysports.jpeg"),
+    image: require("../../assets/koyo.png"),
   },
   {
     id: "3",
     title: "Rings To Perfection",
     description:
       "This project involves building a fully functional ecommerce website that sells jewelry products. I built this website using React, CSS, HTML, MongoDB, Node, CSS3and Express. The website will allow customers to browse through different categories of jewelry products, select their preferred product(s), and make payments for their orders.",
-    image: require("../../assets/citysports.jpeg"),
+    image: require("../../assets/rings.jpeg"),
   },
 ];
 
 const Projects = () => {
     return (
+      <ScrollView>
       <View style={{ marginHorizontal: 20, marginVertical: 10 }}>
       {DummyData.map((item) => (
         <TouchableOpacity key={item.id} style={styles.card}>
@@ -41,6 +42,7 @@ const Projects = () => {
         </TouchableOpacity>
       ))}
     </View>
+    </ScrollView>
     )
 }
 
